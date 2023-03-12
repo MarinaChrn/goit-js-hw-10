@@ -18,3 +18,42 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.info-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.info-icon {
+  width: 25px;
+}
+
+.icon{
+  display: block;
+}
+
+.title {
+  margin: 0;
+}
+
+.struc-about {
+  margin-right: 10px;
+  font-weight: 700;
+}
+
+.country-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.country-list-elem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  height: 30px;
+}
+.county-list-name {
+  font-weight: 500;
+}
