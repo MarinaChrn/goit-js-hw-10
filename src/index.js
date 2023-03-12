@@ -33,6 +33,10 @@ inputEl.addEventListener('input', debounce(() => {
     .then((country) => renderCountries(country))
     .catch((error) => Notiflix.Notify.failure("Oops, there is no country with that name"));
   }
+  else {
+    infoEl.innerHTML='';
+    listEl.innerHTML='';
+  }
 },300));
 
 function renderCountries(country) {
@@ -42,7 +46,7 @@ function renderCountries(country) {
     createOneCountry(country[0]);
   }
   else if (Number(country.length)>=2 && Number(country.length)<=10) {
-    for (element in country) {
+    for (let element in country) {
       createListCountries(element, country);
     }
   }
@@ -67,5 +71,5 @@ function createListCountries(element, country) {
   <img src=${country[element].flags.svg} class="info-icon">
   <p class="county-list-name">${country[element].name.official}</p>
 </li>`;
-infoEl.insertAdjacentHTML('beforeend', countryEl);
+  infoEl.insertAdjacentHTML('beforeend', countryEl);
 }
